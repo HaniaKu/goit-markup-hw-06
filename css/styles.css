@@ -42,8 +42,8 @@ body{
 }
 
 .container{
-    max-width: 1158px;
-    padding: 0 15px;
+    width: 320px;
+    padding: 0 16px;
     margin: 0 auto;  
 }
 
@@ -220,41 +220,79 @@ body{
 }
 
 .advantages{
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .advantages-menu {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .advantages-container{
+    display: none;
+} 
+
+.advantages-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--navy-blue);
+}
+
+.advantages-text {
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+.container{
+    width: 768px;
+}
+.advantages-menu {
+    gap: 72px 24px;
+}
+
+.advantages-item{
+    flex-basis: calc((100% - 24px) / 2);
+}
+}
+
+@media screen and (min-width: 1158px) {
+.container{
+    width: 1158px;
+    padding: 0 15px;
+}
+.advantages{
+    padding: 120px 0; 
+}       
+.advantages-menu {
+    gap: 24px; 
+}
+.advantages-container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     margin-bottom: 8px;
     width: 264px;
     height: 112px;
     border: 1px solid var(--light-slate);
     border-radius: 4px;
-    background: var(--cloud);
-
-}
-
+    background: var(--cloud); 
+} 
 .advantages-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    margin-bottom: 8px;
-    color: var(--navy-blue);
 }
-
 .advantages-item{
     flex-basis: calc((100% - 72px) / 4);
-}
-
+} 
 .advantages-text {
-    font-weight: 400;
+    font-weight: 400; 
+}    
 }
 
  /*===== TEAMS STYLES =====*/
